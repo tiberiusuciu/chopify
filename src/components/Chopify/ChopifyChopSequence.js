@@ -44,6 +44,10 @@ class ChopifyChopSequence extends Component {
                         Name
                     </div>
                     <input className={styles.chopify__namepill__input} type="text" placeholder="MY Chopped Song" />
+                </div>
+
+                <div className={styles.chopify__basic__pill + " " + styles.chopify__downloadpill}>
+                    DOWNLOAD
                 </div> */}
             </div>
 		)
