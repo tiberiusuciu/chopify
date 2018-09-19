@@ -8,8 +8,10 @@ var webpackConfig = require('../webpack.config.js');
 
 var app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 var compiler = webpack(webpackConfig);
-app.use(webpackDevMiddleWare(compiler, {noInfo: true, publicPath: webpackConfig.output.publicPath, mode: "development"}));
+app.use(webpackDevMiddleWare(compiler, {noInfo: true, publicPath: webpackConfig.output.publicPath}));
 app.use(webpackHotMiddleWare(compiler));
 
 // Allows you to set port in the project properties.

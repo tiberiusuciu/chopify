@@ -1,0 +1,32 @@
+:local(.title) {
+	text-align: center;
+}
+
+:local(.chopify__base_style) {
+	color: white;
+}
+
+:local(.chopify__background) {
+	background-image: url("/images/brandon-siu-608784-unsplash.jpg");
+	/* background-image: "/public/anastasia-petrova-193830-unsplash.jpg"; */
+	background-size: cover;
+	/* padding-top: 150px; */
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+:local(.chopify__background__mask) {
+	background: #23232366;
+    height: 100%;
+}
+
+:local(.chopify__header){
+    padding-top: 150px;
+    text-align: center;
+}
+
+:local(.chopify__header) h1{
+    font-weight: lighter;
+}
