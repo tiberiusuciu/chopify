@@ -1,0 +1,44 @@
+:local(.title) {
+	text-align: center;
+	margin-top: 150px;
+}
+
+:local(.example_button) {
+	width: fit-content;
+    padding: 0px 21px;
+	height: 100px;
+	color: white;
+	background-color: crimson;
+	border-bottom: 8px solid darkred;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 50px;
+	font-weight: bold;
+	transition: background-color .25s;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+								  supported by Chrome and Opera */
+}
+
+:local(.example_button):hover {
+	background-color: tomato;
+	cursor: pointer;
+}
+
+:local(.example_button) div {
+	text-align: center;
+    height: 100px;
+    padding-top: 21px;
+}
+
+:local(.credits) {
+	text-align: center;
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+}
