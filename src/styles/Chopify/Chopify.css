@@ -8,7 +8,7 @@
 
 :local(.chopify__background) {
 	background-image: url("/images/brandon-siu-608784-unsplash.jpg");
-	/* background-image: "/public/anastasia-petrova-193830-unsplash.jpg"; */
+	/* background-image: url("/images/anastasia-petrova-193830-unsplash.jpg"); */
 	background-size: cover;
 	/* padding-top: 150px; */
     display: block;
@@ -29,4 +29,175 @@
 
 :local(.chopify__header) h1{
     font-weight: lighter;
+}
+
+
+:local(.chopify__basic__pill) {
+    width: 500px;
+    border-radius: 30px;
+    height: 49px;
+    margin: auto;
+    line-height: 49px;
+}
+
+:local(.chopify__song__input) {
+    background-color: #f6f6f6;
+    color: black;
+    padding: 0px 30px;
+    margin-top: 10px;
+    width: 750px;
+}
+
+:local(.chopify__sequences) {
+    margin-top: 150px;
+}
+
+:local(.chopify__timepill__start__text) {
+    display: inline-block;
+    width: 125px;
+    background-color: steelblue;
+    height: 49px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    font-weight: 500;
+}
+
+:local(.chopify__timepill__start__input) {
+    width: 125px;
+    height: 49px;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #DDD;
+}
+
+:local(.chopify__timepill__end__input) {
+    width: 125px;
+    height: 49px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #DDD;
+}
+
+:local(.chopify__timepill__end__text) {
+    width: 125px;
+    display: inline-block;
+    height: 49px;
+    background-color: mediumaquamarine;
+    text-align: center;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: 500;
+}
+
+:local(.chopify__timepill__options) {
+    width: 500px;
+    display: block;
+    margin: auto;
+}
+
+:local(.chopify__timepill__customname) {
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+}
+
+:local(.chopify__timepill__customname__label) {
+    margin-left: 15px;
+}
+
+:local(.chopify__timepill__fadeeffect) {
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+}
+
+:local(.chopify__timepill__fadeeffect__label) {
+    margin-left: 15px;
+}
+
+:local(.chopify__timepill) {
+    margin-top: 8px;
+}
+
+:local(.chopify__fadepill),
+:local(.chopify__namepill) {
+    margin-top: 15px;
+}
+
+:local(.chopify__fadepill__start__text) {
+    display: inline-block;
+    width: 125px;
+    background-color: lightcoral;
+    height: 49px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    font-weight: 500;
+}
+
+:local(.chopify__fadepill__start__input) {
+    width: 125px;
+    height: 49px;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #DDD;
+}
+
+:local(.chopify__fadepill__end__input) {
+    width: 125px;
+    height: 49px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #DDD;
+}
+
+:local(.chopify__fadepill__end__text) {
+    width: 125px;
+    display: inline-block;
+    height: 49px;
+    background-color: lightcoral;
+    text-align: center;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    font-weight: 500;
+}
+
+:local(.chopify__namepill__label) {
+    display: inline-block;
+    width: 125px;
+    background-color: slategrey;
+    height: 49px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    font-weight: 500;
+}
+
+:local(.chopify__namepill__input) {
+    width: 375px;
+    height: 49px;
+    text-align: center;
+    border: none;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 0px 30px;
+}
+
+
+:local(.chopify__menu) {
+    width: 70px;
+    height: 70px;
+    background-color: royalblue;
+    border: 3px solid #FFF;
+    margin: auto;
+    margin-top: 140px;
+    border-radius: 100px;
+    transition: transform 1s, border-radius 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+:local(.chopify__menu):hover {
+    transform: rotate(585deg);
+    border-radius: 0px;
+    background-color: slateblue;
 }
