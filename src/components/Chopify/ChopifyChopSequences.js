@@ -5,11 +5,20 @@ import ChopifyChopSequence from './ChopifyChopSequence.js';
 import styles from '../../styles/Chopify/Chopify.css';
 
 class ChopifyChopSequences extends Component {
+	generateSequences(sequences) {
+		var id = 0;
+		return sequences.map((s) => {
+			id++;
+			return (
+				<ChopifyChopSequence sequence={s} id={id} />
+			)
+		})
+	}
+	
 	render() {		
-		// Remove these tags once done
 		return (
 			<div className={styles.chopify__sequences}>
-				<ChopifyChopSequence />
+				{this.generateSequences(this.props.chopify.sequences)}
 			</div>
 		)
 	}

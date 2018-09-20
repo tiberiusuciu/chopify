@@ -52,6 +52,7 @@
 
 :local(.chopify__sequences) {
     margin-top: 150px;
+    margin-bottom: 290px;
 }
 
 :local(.chopify__timepill__start__text) {
@@ -193,10 +194,12 @@
     background-color: royalblue;
     border: 3px solid #FFF;
     margin: auto;
-    margin-top: 140px;
     border-radius: 100px;
     transition: transform 1s, border-radius 1s ease-in-out, background-color 1s ease-in-out;
-    margin-bottom: 80px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
 }
 
 :local(.chopify__menu):hover {
@@ -217,6 +220,7 @@
     height: 100vh;
     width: 100%;
     background-color: #000000AA;
+    z-index: 1;
 }
 
 :local(.chopify__menu__screen__basic__button) {
@@ -235,6 +239,8 @@
     bottom: 190px;
     left: 0px;
     right: 150px;
+    transform: rotate(135deg);
+    transition: transform 1s;
 }
 
 :local(.chopify__menu__screen__chop__button) {

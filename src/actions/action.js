@@ -3,13 +3,11 @@ function action(type, payload = {}) {
 	return { type, ...payload };
 }
 
-// This is where you define your action names
+export const FILE_UPLOAD = "FILE_UPLOAD";
+export const ADD_SEQUENCE = "ADD_SEQUENCE";
+export const TOGGLE_MENU = "TOGGLE_MENU";
 
-// This const is an example, remove it once done
-export const EXAMPLE_ACTION = "EXAMPLE_ACTION";
 
-
-// This is where you throw the action event
-
-// This event is an example, remove it once done
-export const action_event = () => action(EXAMPLE_ACTION, {});
+export const file_upload = (file) => action(FILE_UPLOAD, {file});
+export const add_sequence = () => action(ADD_SEQUENCE);
+export const toggle_menu = (menuState) => action(TOGGLE_MENU, {menuState});

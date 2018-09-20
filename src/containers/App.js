@@ -2,22 +2,27 @@ import App from '../components/App';
 import { connect } from 'react-redux';
 
 import {
-	action_event
+	file_upload,
+	add_sequence,
+	toggle_menu
 } from '../actions/action';
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		// To be removed
-		example: state.example,
+		chopify: state.chopify,
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		// Example of even to be removed
-		onActionEvent: () => {
-			console.log("successfully called event!");
-			dispatch(action_event());
+		onFileUpload: (file) => {
+			dispatch(file_upload(file));
+		},
+		onAddSequence: () => {
+			dispatch(add_sequence());
+		},
+		onToggleMenu: (menuState) => {
+			dispatch(toggle_menu(menuState));
 		},
 	};
 };
