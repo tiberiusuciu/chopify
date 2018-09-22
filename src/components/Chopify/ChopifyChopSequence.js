@@ -6,7 +6,7 @@ class ChopifyChopSequence extends Component {
 	render() {		
 		// Remove these tags once done
 		return (
-            <div>
+            <div className={styles.chopify__sequence}>
                 <div className={styles.chopify__timepill__options}>
                     <div className={styles.chopify__timepill__customname}>
                         <input type="checkbox" name="Custom Name" value="name" />

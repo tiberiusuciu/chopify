@@ -20,7 +20,9 @@
 :local(.chopify__background__mask) {
 	background: #23232366;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
+    flex-direction: column;
+    display: flex;
 }
 
 :local(.chopify__header){
@@ -51,9 +53,9 @@
 }
 
 :local(.chopify__sequences) {
-    margin-top: 80px;
-    overflow-y: scroll;
-    max-height: 35%;
+    overflow-y: auto;
+    flex: 100;
+    margin-top: 50px;
 }
 
 :local(.chopify__timepill__start__text) {
@@ -197,10 +199,9 @@
     margin: auto;
     border-radius: 100px;
     transition: transform 1s, border-radius 1s ease-in-out, background-color 1s ease-in-out;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 50px;
+    margin-bottom: 57px;
+    margin-top: 57px;
+    z-index: 1;
 }
 
 :local(.chopify__menu):hover {
@@ -221,7 +222,7 @@
     height: 100vh;
     width: 100%;
     background-color: #000000AA;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 :local(.chopify__menu__screen__basic__button) {
@@ -237,7 +238,7 @@
 }
 
 :local(.chopify__menu__screen__add__button) {
-    bottom: 190px;
+    bottom: 135px;;
     left: 0px;
     right: 150px;
     transform: rotate(135deg);
@@ -245,13 +246,13 @@
 }
 
 :local(.chopify__menu__screen__chop__button) {
-    bottom: 267px;
+    bottom: 210px;
     left: 0px;
     right: 0px;
 }
 
 :local(.chopify__menu__screen__remove__button) {
-    bottom: 190px;
+    bottom: 135px;
     left: 150px;
     right: 0px;
 }
@@ -265,6 +266,6 @@
     font-size: 52px;
 }
 
-.test {
-    background-color: red;
-}
+:local(.chopify__sequence) {
+    margin-top: 35px;
+} 
