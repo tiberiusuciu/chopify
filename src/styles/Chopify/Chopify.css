@@ -51,8 +51,9 @@
 }
 
 :local(.chopify__sequences) {
-    margin-top: 150px;
-    margin-bottom: 290px;
+    margin-top: 80px;
+    overflow-y: scroll;
+    max-height: 35%;
 }
 
 :local(.chopify__timepill__start__text) {
@@ -262,4 +263,8 @@
     text-align: center;
     transform: rotate(-45deg);
     font-size: 52px;
+}
+
+.test {
+    background-color: red;
 }
