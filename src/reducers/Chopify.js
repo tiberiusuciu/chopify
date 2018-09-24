@@ -4,7 +4,11 @@ import {
 	TOGGLE_MENU,
 	TOGGLE_FADE,
 	TOGGLE_NAME,
+	TOGGLE_DELETE,
+	DELETE_SEQUENCE,
 } from '../actions/action.js';
+
+import _ from 'lodash';
 
 const chopify = (state = {
 	file: "",
@@ -25,6 +29,7 @@ const chopify = (state = {
 			state.sequenceId++;
 			return {
 				...state,
+				deleteMode: false,
 				sequences: [...state.sequences, {
 					begin: "",
 					end: "",
@@ -63,7 +68,20 @@ const chopify = (state = {
 				...state,
 				sequences: [...sequences ]
 			};
+		case TOGGLE_DELETE:
+			return {
+				...state,
+				deleteMode: !state.deleteMode,
+			};
 
+		case DELETE_SEQUENCE:
+			var sequences = _.remove(state.sequences, (s) => {
+				return s.id != action.id;
+			});
+			return {
+				...state,
+				sequences: [...sequences ]
+			};
 		default:
 			return state;
 	}

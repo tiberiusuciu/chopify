@@ -11,9 +11,13 @@ class ChopifyMenuScreen extends Component {
 					+
 					</div>
 				</div>
-				<div className={styles.chopify__menu__screen__basic__button + " " + styles.chopify__menu__screen__chop__button}>CHOP</div>
+				<div className={styles.chopify__menu__screen__basic__button + " " + styles.chopify__menu__screen__chop__button}>
+					<div className={styles.chopify__menu__screen__chop__button__text}>
+					CHOP
+					</div>
+				</div>
 				<div className={styles.chopify__menu__screen__basic__button + " " + styles.chopify__menu__screen__remove__button}>
-					<div className={styles.chopify__menu__screen__add__button__text}>
+					<div className={styles.chopify__menu__screen__add__button__text} onClick={() => {this.props.onToggleDelete(); this.props.onToggleMenu(false)}}>
 						-
 					</div>
 				</div>

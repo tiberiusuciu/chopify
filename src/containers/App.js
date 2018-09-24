@@ -7,6 +7,8 @@ import {
 	toggle_menu,
 	toggle_name,
 	toggle_fade,
+	toggle_delete,
+	delete_sequence,
 } from '../actions/action';
 
 const mapStateToProps = (state, ownProps) => {
@@ -31,6 +33,12 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onToggleFade: (id, isChecked) => {
 			dispatch(toggle_fade(id, isChecked));
+		},
+		onToggleDelete: (isDelete) => {
+			dispatch(toggle_delete(isDelete));
+		},
+		onDeleteSequence: (id) => {
+			dispatch(delete_sequence(id));
 		},
 	};
 };

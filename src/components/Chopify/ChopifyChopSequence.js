@@ -42,18 +42,34 @@ class ChopifyChopSequence extends Component {
             )
         }
     }
+
+    generateTrashButton(deleteMode, id, onDeleteSequence) {
+        if (deleteMode) {
+            return (
+                <div onClick={() => {onDeleteSequence(id)}} className={styles.chopify__timepill__trash + " " + styles.chopify__timepill__trash__active}>
+                    <img src="/images/trash-icon.svg" />
+                </div>
+            );
+        }
+        else {
+            return (
+                <div className={styles.chopify__timepill__trash}>
+                </div>
+            );
+        }
+    }
     
     render() {		
-		// Remove these tags once done
 		return (
             <div id={this.props.sequence.id} className={styles.chopify__sequence}>
                 <div className={styles.chopify__timepill__options}>
                     <div className={styles.chopify__timepill__customname}>
-                        <input onChange={(e) => {this.on_check_change(e, this.props.sequence.id, this.props.onToggleName, this.props.onToggleFade )}} id={"sequence_name_" + this.props.id} type="checkbox" name="Custom Name" value="name" />
+                        <input onChange={(e) => {this.on_check_change(e, this.props.sequence.id, this.props.onToggleName, this.props.onToggleFade )}} id={"sequence_name_" + this.props.sequence.id} type="checkbox" name="Custom Name" value="name" />
                         <label htmlFor={"sequence_name_" + this.props.sequence.id} className={styles.chopify__timepill__customname__label}>Add custom name</label>
                     </div>
+                    {this.generateTrashButton(this.props.deleteMode, this.props.sequence.id, this.props.onDeleteSequence)}
                     <div className={styles.chopify__timepill__fadeeffect}>
-                        <input onChange={(e) => {this.on_check_change(e, this.props.sequence.id, this.props.onToggleName, this.props.onToggleFade )}} id={"sequence_fade_" + this.props.id} type="checkbox" name="Add Fade" value="fade" />
+                        <input onChange={(e) => {this.on_check_change(e, this.props.sequence.id, this.props.onToggleName, this.props.onToggleFade )}} id={"sequence_fade_" + this.props.sequence.id} type="checkbox" name="Add Fade" value="fade" />
                         <label htmlFor={"sequence_fade_" + this.props.sequence.id} className={styles.chopify__timepill__fadeeffect__label}>Add fade effect</label>
                     </div>
                 </div>

@@ -11,10 +11,15 @@ import styles from '../../styles/Chopify/Chopify.css';
 
 class Chopify extends Component {
 	
-	displayMenu(menuState, onToggleMenu, onAddSequence) {
+	displayMenu(menuState, onToggleMenu, onAddSequence, onToggleDelete) {
 		if (menuState) {			
 			return (
-				<ChopifyMenuScreen onToggleMenu={onToggleMenu} menuState={menuState} onAddSequence={onAddSequence} />
+				<ChopifyMenuScreen 
+					onToggleMenu={onToggleMenu}
+					menuState={menuState}
+					onAddSequence={onAddSequence}
+					onToggleDelete={onToggleDelete}
+				/>
 			)
 		}
 	}
@@ -23,13 +28,14 @@ class Chopify extends Component {
 		return (
 			<div className={styles.chopify__background + " " + styles.chopify__base_style}>
                 <div className={styles.chopify__background__mask}>
-					{ this.displayMenu(this.props.chopify.displayMenu, this.props.onToggleMenu, this.props.onAddSequence) }
+					{ this.displayMenu(this.props.chopify.displayMenu, this.props.onToggleMenu, this.props.onAddSequence, this.props.onToggleDelete) }
                     <ChopifyHeader/>
                     <ChopifySongInput />
                     <ChopifyChopSequences
 						chopify={this.props.chopify}
 						onToggleName={this.props.onToggleName}
-						onToggleFade={this.props.onToggleFade} />
+						onToggleFade={this.props.onToggleFade}
+						onDeleteSequence={this.props.onDeleteSequence} />
 					<ChopifyMenu onToggleMenu={this.props.onToggleMenu} />
                     <ChopifyFooter />
                 </div>

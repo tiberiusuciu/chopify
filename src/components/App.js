@@ -15,7 +15,9 @@ class App extends Component {
 					onAddSequence={this.props.onAddSequence}
 					onToggleMenu={this.props.onToggleMenu}
 					onToggleName={this.props.onToggleName}
-					onToggleFade={this.props.onToggleFade}/>
+					onToggleFade={this.props.onToggleFade}
+					onToggleDelete={this.props.onToggleDelete}
+					onDeleteSequence={this.props.onDeleteSequence} />
 			</div>
 		)
 	}

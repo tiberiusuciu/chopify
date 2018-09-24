@@ -103,7 +103,7 @@
 }
 
 :local(.chopify__timepill__customname) {
-    width: 250px;
+    width: 200px;
     display: inline-block;
     text-align: center;
 }
@@ -113,9 +113,20 @@
 }
 
 :local(.chopify__timepill__fadeeffect) {
-    width: 250px;
+    width: 200px;
     display: inline-block;
     text-align: center;
+}
+
+:local(.chopify__timepill__trash) {
+    display: inline-block;
+    width: 100px;
+    height: 32px;
+    text-align: center;
+}
+
+:local(.chopify__timepill__trash) > img {
+    width: 28px;
 }
 
 :local(.chopify__timepill__fadeeffect__label) {
@@ -266,6 +277,23 @@
     font-size: 52px;
 }
 
+:local(.chopify__menu__screen__chop__button__text) {
+    height: 70px;
+    line-height: 68px;
+    text-align: center;
+    transform: rotate(-45deg);
+    font-size: 22px;
+}
+
 :local(.chopify__sequence) {
     margin-top: 35px;
-} 
+}
+
+:local(.chopify__timepill__trash__active) {
+    background-color: transparent;
+    transition: background-color .15s;
+}
+
+:local(.chopify__timepill__trash__active):hover {
+    background-color: #FFFFFF44
+}
