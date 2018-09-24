@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import {
 	file_upload,
 	add_sequence,
-	toggle_menu
+	toggle_menu,
+	toggle_name,
+	toggle_fade,
 } from '../actions/action';
 
 const mapStateToProps = (state, ownProps) => {
@@ -23,6 +25,12 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onToggleMenu: (menuState) => {
 			dispatch(toggle_menu(menuState));
+		},
+		onToggleName: (id, isChecked) => {
+			dispatch(toggle_name(id, isChecked));
+		},
+		onToggleFade: (id, isChecked) => {
+			dispatch(toggle_fade(id, isChecked));
 		},
 	};
 };

@@ -5,12 +5,10 @@ import ChopifyChopSequence from './ChopifyChopSequence.js';
 import styles from '../../styles/Chopify/Chopify.css';
 
 class ChopifyChopSequences extends Component {
-	generateSequences(sequences) {
-		var id = 0;
+	generateSequences(sequences, onToggleName, onToggleFade) {
 		return sequences.map((s) => {
-			id++;
 			return (
-				<ChopifyChopSequence sequence={s} id={id} />
+				<ChopifyChopSequence sequence={s} onToggleName={onToggleName} onToggleFade={onToggleFade} />
 			)
 		})
 	}
@@ -18,7 +16,7 @@ class ChopifyChopSequences extends Component {
 	render() {		
 		return (
 			<div className={styles.chopify__sequences}>
-				{this.generateSequences(this.props.chopify.sequences)}
+				{this.generateSequences(this.props.chopify.sequences, this.props.onToggleName, this.props.onToggleFade)}
 			</div>
 		)
 	}

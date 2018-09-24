@@ -26,7 +26,10 @@ class Chopify extends Component {
 					{ this.displayMenu(this.props.chopify.displayMenu, this.props.onToggleMenu, this.props.onAddSequence) }
                     <ChopifyHeader/>
                     <ChopifySongInput />
-                    <ChopifyChopSequences chopify={this.props.chopify} />
+                    <ChopifyChopSequences
+						chopify={this.props.chopify}
+						onToggleName={this.props.onToggleName}
+						onToggleFade={this.props.onToggleFade} />
 					<ChopifyMenu onToggleMenu={this.props.onToggleMenu} />
                     <ChopifyFooter />
                 </div>

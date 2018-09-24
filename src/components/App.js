@@ -13,7 +13,9 @@ class App extends Component {
 				<Chopify chopify={this.props.chopify}
 					onFileUpload={this.props.onFileUpload}
 					onAddSequence={this.props.onAddSequence}
-					onToggleMenu={this.props.onToggleMenu}/>
+					onToggleMenu={this.props.onToggleMenu}
+					onToggleName={this.props.onToggleName}
+					onToggleFade={this.props.onToggleFade}/>
 			</div>
 		)
 	}
