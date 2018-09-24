@@ -35,7 +35,12 @@ class Chopify extends Component {
 						chopify={this.props.chopify}
 						onToggleName={this.props.onToggleName}
 						onToggleFade={this.props.onToggleFade}
-						onDeleteSequence={this.props.onDeleteSequence} />
+						onDeleteSequence={this.props.onDeleteSequence}
+						onChangeTimeBegin={this.props.onChangeTimeBegin}
+						onChangeTimeEnd={this.props.onChangeTimeEnd}
+						onChangeFadeBegin={this.props.onChangeFadeBegin}
+						onChangeFadeEnd={this.props.onChangeFadeEnd}
+						onChangeName={this.props.onChangeName} />
 					<ChopifyMenu onToggleMenu={this.props.onToggleMenu} />
                     <ChopifyFooter />
                 </div>

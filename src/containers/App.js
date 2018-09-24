@@ -9,6 +9,11 @@ import {
 	toggle_fade,
 	toggle_delete,
 	delete_sequence,
+	change_time_begin,
+	change_time_end,
+	change_fade_begin,
+	change_fade_end,
+	change_name,
 } from '../actions/action';
 
 const mapStateToProps = (state, ownProps) => {
@@ -39,6 +44,21 @@ const mapDispatchToProps = (dispatch) => {
 		},
 		onDeleteSequence: (id) => {
 			dispatch(delete_sequence(id));
+		},
+		onChangeTimeBegin: (id, time) => {
+			dispatch(change_time_begin(id, time))
+		},
+		onChangeTimeEnd: (id, time) => {
+			dispatch(change_time_end(id, time));
+		},
+		onChangeFadeBegin: (id, time) => {
+			dispatch(change_fade_begin(id, time));
+		},
+		onChangeFadeEnd: (id, time) => {
+			dispatch(change_fade_end(id, time));
+		},
+		onChangeName: (id, name) => {
+			dispatch(change_name(id, name));
 		},
 	};
 };

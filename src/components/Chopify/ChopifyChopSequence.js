@@ -58,6 +58,19 @@ class ChopifyChopSequence extends Component {
             );
         }
     }
+
+    begin_time_change(e, args) {
+        console.log("e", e);
+        console.log("e.target", e.target);
+        console.log("e.value", e.value);
+        console.log("e.value", e.target.value);
+        
+        console.log("args", args);
+        
+        
+        
+        
+    }
     
     render() {		
 		return (
@@ -77,7 +90,7 @@ class ChopifyChopSequence extends Component {
                     <div className={styles.chopify__timepill__start__text}>
                         Start
                     </div>
-                    <input className={styles.chopify__timepill__start__input} type="text" placeholder="hh/mm/ss" />
+                    <input onChange={(e, args) => {this.begin_time_change(e, args)}} className={styles.chopify__timepill__start__input} type="text" placeholder="hh/mm/ss" />
                     <input className={styles.chopify__timepill__end__input} type="text" placeholder="hh/mm/ss" />
                     <div className={styles.chopify__timepill__end__text}>
                         End

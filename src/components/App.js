@@ -17,7 +17,12 @@ class App extends Component {
 					onToggleName={this.props.onToggleName}
 					onToggleFade={this.props.onToggleFade}
 					onToggleDelete={this.props.onToggleDelete}
-					onDeleteSequence={this.props.onDeleteSequence} />
+					onDeleteSequence={this.props.onDeleteSequence}
+					onChangeTimeBegin={this.props.onChangeTimeBegin}
+					onChangeTimeEnd={this.props.onChangeTimeEnd}
+					onChangeFadeBegin={this.props.onChangeFadeBegin}
+					onChangeFadeEnd={this.props.onChangeFadeEnd}
+					onChangeName={this.props.onChangeName} />
 			</div>
 		)
 	}
